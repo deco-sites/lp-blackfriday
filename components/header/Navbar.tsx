@@ -24,7 +24,7 @@ function Navbar({ items, searchbar, logo }: {
       {/* Mobile Version */}
       <div
         style={{ height: navbarHeight }}
-        class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 gap-2"
+        class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full h-full pl-2 pr-6 gap-2"
       >
         <MenuButton />
 
@@ -47,7 +47,7 @@ function Navbar({ items, searchbar, logo }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
+      <div class="hidden md:flex flex-row justify-around items-center border-b border-base-200 w-full pl-4 pr-4">
         <div class="flex-none w-44">
           {logo && (
             <a
@@ -55,12 +55,9 @@ function Navbar({ items, searchbar, logo }: {
               aria-label="Store logo"
               class="block px-4 py-3 w-[160px]"
             >
-              <Image src={logo.src} alt={logo.alt} width={126} height={16} />
+              <Image src={logo.src} alt={logo.alt} width={136} height={46} />
             </a>
           )}
-        </div>
-        <div class="flex-auto flex justify-center">
-          {items.map((item) => <NavItem item={item} />)}
         </div>
         <div class="flex-none w-44 flex items-center justify-end gap-2">
           <SearchButton />
@@ -72,18 +69,7 @@ function Navbar({ items, searchbar, logo }: {
           >
             <Icon id="User" size={24} strokeWidth={0.4} />
           </a>
-          <a
-            class="btn btn-circle btn-sm btn-ghost"
-            href="/wishlist"
-            aria-label="Wishlist"
-          >
-            <Icon
-              id="Heart"
-              size={24}
-              strokeWidth={2}
-              fill="none"
-            />
-          </a>
+
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
           {platform === "wake" && <CartButtonWake />}

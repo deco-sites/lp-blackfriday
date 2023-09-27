@@ -11,7 +11,7 @@ export interface MainColors {
   /**
    * @format color
    * @title Base
-   * @default #FFFFFF
+   * @default #3A3541
    */
   "base-100": string;
   /**

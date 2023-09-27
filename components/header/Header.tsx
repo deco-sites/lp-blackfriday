@@ -2,7 +2,6 @@ import type { Props as SearchbarProps } from "$store/components/search/Searchbar
 import Drawers from "$store/islands/Header/Drawers.tsx";
 import type { Product, Suggestion } from "apps/commerce/types.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
 import { usePlatform } from "$store/sdk/usePlatform.tsx";
@@ -69,7 +68,7 @@ function Header({
           platform={platform}
         >
           <div class="bg-base-100 fixed w-full z-50">
-            <Alert alerts={alerts} />
+           
             <Navbar items={navItems} searchbar={searchbar} logo={logo} />
           </div>
         </Drawers>

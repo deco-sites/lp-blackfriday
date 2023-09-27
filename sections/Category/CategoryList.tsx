@@ -80,7 +80,7 @@ function CategoryList(props: Props) {
   return (
     <div
       id={id}
-      class="container py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10"
+      class="container py-8 flex flex-col gap-8 lg:gap-10 text-base-content uppercase lg:py-10"
     >
       <Header
         title={header.title}

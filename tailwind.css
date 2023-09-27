@@ -9,8 +9,16 @@
     font-family: var(--font-family);
   }
 
+  body {
+    background-color: #3A3541;
+  }
+
   mark {
     @apply bg-accent text-accent-content;
+  }
+
+  h1 {
+    color: #FFF !important;
   }
 
   /** Remove default styles from input[type=number] */

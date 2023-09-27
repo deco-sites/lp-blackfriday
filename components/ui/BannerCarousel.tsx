@@ -92,9 +92,9 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     <a
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative h-[600px] overflow-y-hidden w-full"
+      class="relative overflow-y-hidden w-full m-auto !w-[1140px]"
     >
-      <Picture preload={lcp}>
+      <Picture preload={lcp} class="flex items-center">
         <Source
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
@@ -106,27 +106,16 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           media="(min-width: 768px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
-          width={1440}
+          width={1140}
           height={600}
         />
         <img
-          class="object-cover w-full h-full"
+          class="object-cover w-[1140px] h-full pl-10 pr-10"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
         />
       </Picture>
-      {action && (
-        <div class="absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 p-4 rounded glass">
-          <span class="text-6xl font-medium text-base-100">
-            {action.title}
-          </span>
-          <span class="font-medium text-xl text-base-100">
-            {action.subTitle}
-          </span>
-          <Button class="glass">{action.label}</Button>
-        </div>
-      )}
     </a>
   );
 }
@@ -207,10 +196,6 @@ function BannerCarousel(props : Props) {
           </Slider.Item>
         ))}
       </Slider>
-
-      <Buttons />
-
-      <Dots images={images} interval={interval} />
 
       <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
     </div>
