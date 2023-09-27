@@ -6,7 +6,7 @@
 
   /* Allow changing font family via CMS */
   html {
-    font-family: var(--font-family);
+    font-family: Roboto;
   }
 
   body {
@@ -19,6 +19,19 @@
 
   h1 {
     color: #FFF !important;
+  }
+
+  }
+
+  .badge-sm {
+    height: 19px !important;
+    font-size: .75rem;
+    width: 19px !important;
+    line-height: 1rem;
+    background-color: #AB7E02;
+    padding-left: 0.438rem;
+    padding-right: 0.438rem;
+    border: none;
   }
 
   /** Remove default styles from input[type=number] */
@@ -34,7 +47,6 @@
     overflow: hidden;
     height: 100vh;
   }
-}
 
 .group:disabled .group-disabled\:animate-progress {
   animation: progress-frame ease normal

@@ -65,6 +65,14 @@ function Navbar({ items, searchbar, logo }: {
           <a
             class="btn btn-circle btn-sm btn-ghost"
             href="/login"
+            aria-label="local"
+          >
+            <Icon id="local" size={24} strokeWidth={0.4} />
+          </a>
+          <Searchbar searchbar={searchbar} />
+          <a
+            class="btn btn-circle btn-sm btn-ghost"
+            href="/login"
             aria-label="Log in"
           >
             <Icon id="User" size={24} strokeWidth={0.4} />

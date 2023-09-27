@@ -39,7 +39,7 @@ function CartButton({ loading, currency, total, items }: Props) {
         onClick={onClick}
       >
         <Icon id="sacola" size={24} strokeWidth={2} />
-        <p>Sacola</p>
+        <p class="text-[#AB7E02] font-normal">Sacola</p>
       </Button>
       
     </div>
