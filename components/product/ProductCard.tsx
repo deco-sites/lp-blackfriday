@@ -95,17 +95,17 @@ function ProductCard(
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn btn-block bg-[#F29073] text-[#FFF]"
     >
-      {l?.basics?.ctaText || "Ver produto"}
+      {l?.basics?.ctaText || "Comprar"}
     </a>
   );
 
   return (
     <div
       id={id}
-      class={`card card-compact group w-full ${
-        align === "center" ? "text-center" : "text-start"
+      class={`card card-compact group w-full bg-[#FFF] ${
+        align === "center" ? "text-left" : "text-start"
       } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
         ${
         l?.onMouseOver?.card === "Move up" &&
@@ -211,20 +211,7 @@ function ProductCard(
       {/* Prices & Name */}
       <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-4">
         {/* SKU Selector */}
-        {(!l?.elementsPositions?.skuSelector ||
-          l?.elementsPositions?.skuSelector === "Top") && (
-          <>
-            {l?.hide?.skuSelector ? "" : (
-              <ul
-                class={`flex items-center gap-2 w-full overflow-auto p-3 ${
-                  align === "center" ? "justify-center" : "justify-start"
-                } ${l?.onMouseOver?.showSkuSelector ? "lg:hidden" : ""}`}
-              >
-                {skuSelector}
-              </ul>
-            )}
-          </>
-        )}
+      
 
         {l?.hide?.productName && l?.hide?.productDescription
           ? ""
@@ -260,7 +247,7 @@ function ProductCard(
               >
                 {formatPrice(listPrice, offers?.priceCurrency)}
               </div>
-              <div class="text-accent text-base lg:text-xl">
+              <div class="text-accent !text-[#000] font-bold text-base lg:text-xl">
                 {formatPrice(price, offers?.priceCurrency)}
               </div>
             </div>

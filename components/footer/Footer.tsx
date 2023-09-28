@@ -119,22 +119,6 @@ function Footer({
     form: { placeholder: "", buttonText: "", helpText: "" },
   },
   sections = [{
-    "label": "Sobre",
-    "items": [
-      {
-        "href": "/quem-somos",
-        "label": "Quem somos",
-      },
-      {
-        "href": "/termos-de-uso",
-        "label": "Termos de uso",
-      },
-      {
-        "href": "/trabalhe-conosco",
-        "label": "Trabalhe conosco",
-      },
-    ],
-  }, {
     "label": "Atendimento",
     "items": [
       {
@@ -148,6 +132,22 @@ function Footer({
       {
         "href": "/trocaedevolucao",
         "label": "Troca e devolução",
+      },
+    ],
+  }, {
+    "label": "Institucional",
+    "items": [
+      {
+        "href": "/quem-somos",
+        "label": "Quem somos",
+      },
+      {
+        "href": "/termos-de-uso",
+        "label": "Termos de uso",
+      },
+      {
+        "href": "/trabalhe-conosco",
+        "label": "Trabalhe conosco",
       },
     ],
   }],
@@ -214,7 +214,7 @@ function Footer({
 
   return (
     <footer
-      class={`w-full flex flex-col pt-10 pb-2 md:pb-10 gap-10 ${
+      class={`w-full flex flex-col pt-10 pb-2 md:pb-10 gap-10 !bg-[#2E2E2F] ${
         ColorClasses(layout)
       }`}
     >
@@ -222,9 +222,9 @@ function Footer({
         {(!layout?.variation || layout?.variation == "Variation 1") && (
           <div class="flex flex-col gap-10">
             <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap gap-8 lg:gap-12">
-              {_logo}
+        
               {_sectionLinks}
-              {_newsletter}
+           
             </div>
             <Divider />
             <div class="flex flex-col md:flex-row gap-10 md:gap-14 md:items-end">

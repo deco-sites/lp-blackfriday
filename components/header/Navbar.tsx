@@ -59,7 +59,7 @@ function Navbar({ items, searchbar, logo }: {
             </a>
           )}
         </div>
-        <div class="flex-none w-44 flex items-center justify-end gap-2">
+        <div class="flex-none w-44 flex items-center justify-end gap-7">
           <SearchButton />
           <Searchbar searchbar={searchbar} />
           <a
@@ -68,14 +68,17 @@ function Navbar({ items, searchbar, logo }: {
             aria-label="local"
           >
             <Icon id="local" size={24} strokeWidth={0.4} />
+            <p class="text-[#AB7E02] font-normal">Lojas</p>
           </a>
           <Searchbar searchbar={searchbar} />
           <a
             class="btn btn-circle btn-sm btn-ghost"
             href="/login"
             aria-label="Log in"
+            
           >
             <Icon id="User" size={24} strokeWidth={0.4} />
+            <p class="text-[#AB7E02] font-normal">Entrar</p>
           </a>
 
           {platform === "vtex" && <CartButtonVTEX />}
