@@ -35,12 +35,12 @@ function Navbar({ items, searchbar, logo }: {
             style={{ minHeight: navbarHeight }}
             aria-label="Store logo"
           >
-            <Image src={logo.src} alt={logo.alt} width={126} height={16} />
+            <Image src={logo.src} alt={logo.alt} width={126} height={46} />
           </a>
         )}
 
         <div class="flex gap-1">
-          <SearchButton />
+          
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
         </div>
